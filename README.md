@@ -1,0 +1,2 @@
+# myEvent
+Wordpress widget 
