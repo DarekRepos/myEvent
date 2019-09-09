@@ -5,7 +5,7 @@ namespace MetaBox;
 
 use WP_Post;
 
-class MyEvent_MetaBox {
+class MetaBoxBase {
 	private $id;
 	private $title;
 	private $screens;
