@@ -1,7 +1,7 @@
 <?php
 
 
-namespace MyEvents\MetaBox;
+namespace MyEvent\Core;
 
 use WP_Post;
 

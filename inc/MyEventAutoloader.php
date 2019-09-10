@@ -1,20 +1,20 @@
 <?php
 
-namespace MyEvents;
+namespace MyEvent\MyEventAutoloader;
+
+use Exception;
 
 class MyEventAutoloader {
 
 	protected $prefixes = [];
 
-	public function register($prepend=false) {
-
+	public function register() {
 
 		try {
-			spl_autoload_register( [ $this, 'loadClass' ], true, $prepend );
-		} catch ( \Exception $e ) {
+			spl_autoload_register( [ $this, 'loadClass' ] );
+		} catch ( Exception $e ) {
 			//do nothing
 		}
-
 
 	}
 

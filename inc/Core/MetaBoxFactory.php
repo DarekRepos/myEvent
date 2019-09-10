@@ -1,7 +1,7 @@
 <?php
 
 
-namespace MyEvents\MetaBox;
+namespace MyEvent\Core;
 
 class MetaBoxFactory {
 	public static function create( $id, $title, $template, $screens = [], $context = 'advanced', $priority = 'default' ) {
