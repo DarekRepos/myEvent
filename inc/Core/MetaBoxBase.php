@@ -60,7 +60,7 @@ class MetaBoxBase {
 		return $this->priority;
 	}
 
-	public function get_callback() {
+	public function getCallback() {
 		return [ $this, 'render' ];
 	}
 
