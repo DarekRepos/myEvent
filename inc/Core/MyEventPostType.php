@@ -20,7 +20,7 @@ Class MyEventPostType {
 			'supports'             => [ 'title', 'editor', 'excerpt' ],
 			'register_meta_box_cb' => [ $this, 'myevents_metaboxes_callback' ]
 		];
-
+		//TODO: fix permanent links
 		register_post_type( $type, $args );
 	}
 
