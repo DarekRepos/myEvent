@@ -15,5 +15,5 @@ interface MyEventAdminPageInterface {
 
 	public function getSlug();
 
-	public function render_page();
+	public function renderPage();
 }
