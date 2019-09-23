@@ -1,0 +1,43 @@
+div.events-widget{
+    margin: 4px 4px 4px 4px;
+    padding-left: 4px;
+}
+
+.events-widget {
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+    padding: 10px;
+    transition: all .3s;
+    color: #666;
+}
+
+.events-date {
+    font-size: 36px;
+    width: 60px;
+    float: left;
+}
+
+.events-date span {
+    font-size: 12px;
+    display: block;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.events-content {
+    margin-left: 60px;
+}
+
+.events-event-title {
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.events-hours {
+    display: block;
+    font-size: 12px;
+}
+
+
+

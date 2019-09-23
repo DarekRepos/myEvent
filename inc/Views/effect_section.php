@@ -1,0 +1,1 @@
+<p><?php esc_html_e('Customize widget display styles', 'myplugin'); ?></p>
