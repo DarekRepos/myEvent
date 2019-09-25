@@ -36,7 +36,7 @@ class MyEventAdminPage extends MyEventAdminPageRender implements MyEventAdminPag
 			$options->getOptionName( 'myevent_option' ),
 			[
 				'type'              => 'string',
-				'show_in_rest'      => false,
+				'show_in_rest'      => true,
 				'sanitize_callback' => [ $this, 'sanitizeSettings' ]
 			] );
 

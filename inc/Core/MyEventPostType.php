@@ -8,7 +8,7 @@ use MyEvent\Core\MetaBoxFactory;
 
 Class MyEventPostType {
 	public function register() {
-		$type = 'myevents';
+		$type   = 'myevents';
 		$labels = [
 			'name'          => esc_html__( 'MyEvent' ),
 			'singular_name' => esc_html__( 'MyEvent' )
@@ -18,6 +18,7 @@ Class MyEventPostType {
 			'public'               => true,
 			'has_archive'          => true,
 			'supports'             => [ 'title', 'editor', 'excerpt' ],
+			'show_in_rest'         => true,
 			'register_meta_box_cb' => [ $this, 'myevents_metaboxes_callback' ]
 		];
 		//TODO: fix permanent links
@@ -27,12 +28,12 @@ Class MyEventPostType {
 	public function myevents_metaboxes_callback() {
 		//TODO add languages support
 		$template_location = plugin_dir_path( __DIR__ ) . 'Views/location-metabox-view.php';
-		$template_date     =  plugin_dir_path( __DIR__ ) .'Views/date-metabox-view.php';
-		$template_time     =  plugin_dir_path( __DIR__ ) .'Views/time-metabox-view.php';
+		$template_date     = plugin_dir_path( __DIR__ ) . 'Views/date-metabox-view.php';
+		$template_time     = plugin_dir_path( __DIR__ ) . 'Views/time-metabox-view.php';
 
-		$meta_box_location = MetaBoxFactory::create( 'myEvents_location', esc_html__('Event Location'), $template_location, 'myevents', 'normal' );
-		$meta_box_date     = MetaBoxFactory::create( 'myEvents_date', esc_html__('Event date'), $template_date, 'myevents', 'side' );
-		$meta_box_time     = MetaBoxFactory::create( 'myEvents_time', esc_html__('Event time'), $template_time, 'myevents', 'side' );
+		$meta_box_location = MetaBoxFactory::create( 'myEvents_location', esc_html__( 'Event Location' ), $template_location, 'myevents', 'normal' );
+		$meta_box_date     = MetaBoxFactory::create( 'myEvents_date', esc_html__( 'Event date' ), $template_date, 'myevents', 'side' );
+		$meta_box_time     = MetaBoxFactory::create( 'myEvents_time', esc_html__( 'Event time' ), $template_time, 'myevents', 'side' );
 
 		add_meta_box( $meta_box_location->getId(),
 			$meta_box_location->getTitle(),
