@@ -3,7 +3,7 @@
 
 namespace MyEvent\Core;
 
-//Do not support multisite options
+//Not support multisite options
 
 class MyEventOptions {
 

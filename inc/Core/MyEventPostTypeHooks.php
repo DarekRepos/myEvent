@@ -26,9 +26,18 @@ class MyEventPostTypeHooks {
 			return $post->ID;
 		}
 
-		$events_meta['_location'] = $_POST['_location'];
-		$events_meta['_date']     = $_POST['_date'];
-		$events_meta['_time']     = $_POST['_time'];
+		$location                 = sanitize_text_field( $_POST['_location'] );
+		$location                 = filter_var( $location, FILTER_SANITIZE_SPECIAL_CHARS );
+		$events_meta['_location'] = $location;
+
+		$date                 = sanitize_text_field( $_POST['_date'] );
+		$date                 = filter_var( preg_replace( "[^0-9-]", "", htmlentities( $date ) ) );
+		$events_meta['_date'] = $date;
+
+
+		$time                 = sanitize_text_field( $_POST['_time'] );
+		$time                 = filter_var( preg_replace( "[^0-9:]", "", htmlentities( $time ) ) );
+		$events_meta['_time'] = $time;
 
 		foreach ( $events_meta as $key => $value ) {
 

@@ -18,6 +18,5 @@ class MyEventLanguageSubscriber implements SubscriberHooksInterface {
 		load_plugin_textdomain( 'myEvents',
 			false,
 			dirname( plugin_basename( __FILE__ ) ) . '/lang' );
-		d(dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 	}
 }

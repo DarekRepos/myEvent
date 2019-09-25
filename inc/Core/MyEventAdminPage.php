@@ -30,12 +30,15 @@ class MyEventAdminPage extends MyEventAdminPageRender implements MyEventAdminPag
 
 		$options = new MyEventOptions;
 
-		//TODO: add sanitazon settings
-		//TODO: change MyEventOptions
-		//TODO: unninstal delete atribute settings, posts delete database
-		//TODO: check is admin , can edit page
+		//TODO: uninstall delete attribute settings, posts delete database
 
-		register_setting( $this->getSlug() . '-group', $options->getOptionName( 'myevent_option' ) );
+		register_setting( $this->getSlug() . '-group',
+			$options->getOptionName( 'myevent_option' ),
+			[
+				'type'              => 'string',
+				'show_in_rest'      => false,
+				'sanitize_callback' => [ $this, 'sanitizeSettings' ]
+			] );
 
 		add_settings_section( $this->getSlug() . '-event-section',
 			esc_html__( 'Events', 'myevent' ),
@@ -78,5 +81,31 @@ class MyEventAdminPage extends MyEventAdminPageRender implements MyEventAdminPag
 			$this->getSlug(),
 			$this->getSlug() . '-effect-section'
 		);
+	}
+
+	public function sanitizeSettings( $input ) {
+		$output = [];
+
+		foreach ( $input as $key => $value ) {
+
+			$value = strip_tags( stripcslashes( $value ) );
+
+			switch ( $key ) {
+				case 'myevents_admin_page-amount':
+					$output[ $key ] = sanitize_text_field( $value );
+					break;
+				case 'myevents_admin_page-hover-option':
+					$allowed_values = [ 'none', 'border' ];
+					$choice         = !array_key_exists( $value , $allowed_values )
+						              ? $value :
+									 'none';
+					$output[ $key ] = sanitize_text_field( $choice );
+					break;
+				case 'myevents_admin_page-text-color-option':
+					$output[ $key ] = sanitize_hex_color( $value );
+					break;
+			}
+		}
+		return $output;
 	}
 }

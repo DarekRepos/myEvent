@@ -24,17 +24,13 @@ class MyEventWidget extends \WP_Widget {
 
 		echo $args['before_widget'];
 
-		//TODO: check escaping if try echo esc
 		if ( ! empty( $instance['title'] ) ) {
-			echo $args['before_title'] . $title . $args['after_title'];
+			echo $args['before_title'] . esc_attr( $title ) . $args['after_title'];
 		}
 
 		$this->myevents_widget_content();
 
 		echo $args['after_widget'];
-
-		//TODO: add loading styles from class
-
 	}
 
 	public function form( $instance ) {
@@ -73,9 +69,14 @@ class MyEventWidget extends \WP_Widget {
 
 	private function myevents_widget_content() {
 
+		$options = new MyEventOptions();
+
 		$query = new WP_Query( [
 			'post_type'      => 'myevents',
-			'posts_per_page' => get_option( 'myevent_option' )['myevents_admin_page-amount']
+			'posts_per_page' => ( empty( $options -> get( 'myevent_option' )['myevents_admin_page-amount'] )
+				? '1' :
+				$options -> get( 'myevent_option' )['myevents_admin_page-amount']
+            )
 		] );
 
 		if ( $query->have_posts() ) {
@@ -92,11 +93,12 @@ class MyEventWidget extends \WP_Widget {
 
 				?>
                 <div class="events-box">
-                    <div class="events-date"><?php echo $day; ?><span><?php echo $month; ?></span></div>
+                    <div class="events-date"><?php echo esc_attr( $day ); ?>
+                        <span><?php echo esc_attr( $month ); ?></span></div>
                     <div class="events-content">
                         <span class="events-event-title"><?php the_title(); ?></span>
-                        <span class="events-hours"><?php echo $time; ?></span>
-                        <span class="events-location"><?php echo $location; ?></span>
+                        <span class="events-hours"><?php echo esc_attr( $time ); ?></span>
+                        <span class="events-location"><?php echo esc_attr( $location ); ?></span>
                     </div>
                 </div>
 			<?php
