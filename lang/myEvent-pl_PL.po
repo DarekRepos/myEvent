@@ -1,0 +1,111 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: myEvent\n"
+"POT-Creation-Date: 2019-09-27 15:44+0200\n"
+"PO-Revision-Date: 2019-09-27 15:45+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: myEvent.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: inc/Core/MyEventAdminPage.php:44
+msgid "Events"
+msgstr "Wydarzenia"
+
+#: inc/Core/MyEventAdminPage.php:51
+msgid "Effects"
+msgstr "Efekty"
+
+#: inc/Core/MyEventAdminPage.php:58
+msgid "Number of events"
+msgstr "Liczba wydarzeń"
+
+#: inc/Core/MyEventAdminPage.php:67
+msgid "Hover effect"
+msgstr "Efekt Hover"
+
+#: inc/Core/MyEventAdminPage.php:76
+msgid "Text color"
+msgstr "Kolor tekstu"
+
+#: inc/Core/MyEventPostType.php:13 inc/Core/MyEventPostType.php:14
+msgid "MyEvent"
+msgstr "MyEvent"
+
+#: inc/Core/MyEventPostType.php:34
+msgid "Event Location"
+msgstr "Miejsce wydarzenia"
+
+#: inc/Core/MyEventPostType.php:35
+msgid "Event date"
+msgstr "Data wydarzenia"
+
+#: inc/Core/MyEventPostType.php:36
+msgid "Event time"
+msgstr "Czas wydarzenia"
+
+#: inc/Core/MyEventWidget.php:16
+msgid "A plugin for display basic events"
+msgstr "Wtyczka wyswietlająca wyddarzenia"
+
+#: inc/Core/MyEventWidget.php:18
+msgid "myEvent Widget"
+msgstr "myEvent widget"
+
+#: inc/Core/MyEventWidget.php:49
+msgid "Title:"
+msgstr "Tytuł:"
+
+#: inc/Views/effect_section.php:1
+msgid "Customize widget display styles"
+msgstr "Dostosuj style wyświetlania widgetu"
+
+#: inc/Views/event_section.php:1
+msgid "Adjust the number of widget events displayed"
+msgstr "Dostosuj liczbę wyświetlanych wydarzeń"
+
+#: inc/Views/hover_option_field.php:5
+msgid "none"
+msgstr "brak"
+
+#: inc/Views/hover_option_field.php:23
+msgid "border"
+msgstr "obramowanie"
+
+#: inc/Views/page.php:9
+msgid "Save"
+msgstr "Zapisz"
+
+#. Plugin Name of the plugin/theme
+msgid "myEvent"
+msgstr "myEvent"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/DarekRepos/myEvent"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "This is the widget displays events dates."
+msgstr "Dostosuj style wyświetlania widgetu."
+
+#. Author of the plugin/theme
+msgid "Darek Duda"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://dudawebsite.com"
+msgstr ""

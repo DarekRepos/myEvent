@@ -9,14 +9,19 @@ use MyEvent\EventManagement\SubscriberHooksInterface;
 class MyEventLanguageSubscriber implements SubscriberHooksInterface {
 
 	public static function getSubscribedHooks() {
+
 		return [
-			'plugin_loaded' => 'loadTextDomain'
+			'init' => 'loadTextDomain'
 		];
+
 	}
 
-	Public function loadTextDomain() {
-		load_plugin_textdomain( 'myEvents',
+	Public static function loadTextDomain() {
+		load_plugin_textdomain( 'myEvent',
 			false,
-			dirname( plugin_basename( __FILE__ ) ) . '/lang' );
+			dirname( __FILE__, 3 )  . '/lang/' );
+
+
 	}
+
 }

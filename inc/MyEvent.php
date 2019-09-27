@@ -1,4 +1,17 @@
 <?php
+/**
+ * Plugin Name:       myEvent
+ * Plugin URI:        https://github.com/DarekRepos/myEvent
+ * Description:       This is the widget displays events dates.
+ * Version:           1.0.0
+ * Author:            Darek Duda
+ * Author URI:        https://dudawebsite.com
+ * License:           GPL-2.0+ or later
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:       myEvent
+ * Domain Path:       /lang
+ */
+
 
 namespace MyEvent;
 
@@ -23,7 +36,6 @@ class MyEvent {
 	private $myeventpostypehooks;
 
 
-//TODO: reduce coupling: depency inversion / injection/ solid
 	public function __construct( $file ) {
 		$this->pluginsbasename     = plugin_basename( $file );
 		$this->myeventposttype     = new MyEventPostType();
@@ -32,8 +44,6 @@ class MyEvent {
 		$this->myeventwidget = new MyEventWidgetSubscriber();
 		$this->myeventwidget->registerMyeventWidget();
 		$this->pluginmanager = new EventManager();
-		//TODO: Add shortcode
-		//TODO: Add init settings
 	}
 
 	public function load() {
