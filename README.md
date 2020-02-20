@@ -7,7 +7,7 @@ myEvent Wordpress Plugin allow you to add events from WordPress widgets. Once yo
 Currently myEvent plugin is not available in the official website: https://wordpress.org/plugins/ 
 
 ### From this repository
-Go to the [releases](https://github.com/Darekrepos/myevent/releases) section of the repository and download the most recent release.
+Go to the [releases](https://github.com/Darekrepos/myevent/releases) section of the repository and download the most recent release. It is the latest file with the ZIP extension.
 
 Then, from your WordPress administration panel, go to **"Plugins > Add New"** and click the "Upload Plugin" button at the top of the page.
 
