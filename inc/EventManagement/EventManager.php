@@ -34,7 +34,7 @@ class EventManager extends PluginAPIManager {
 		} elseif ( is_array( $parameters ) && isset( $parameters[0] ) ) {
 			$this->removeCallback( $hook_name,
 				[ $subscriber, $parameters[0] ],
-				isset( $parameters[1] ) ? $parameters[1] : 10,
+				isset( $parameters[1] ) ? $parameters[1] : 10
 				 );
 		}
 	}
