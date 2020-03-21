@@ -9,7 +9,7 @@
  * License:           GPL-2.0+ or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       myEvent
- * Domain Path:       /lang
+ * Domain Path:       /languages
  */
 
 

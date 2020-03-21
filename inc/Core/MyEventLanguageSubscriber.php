@@ -19,7 +19,7 @@ class MyEventLanguageSubscriber implements SubscriberHooksInterface {
 	Public static function loadTextDomain() {
 		load_plugin_textdomain( 'myEvent',
 			false,
-			dirname( __FILE__, 3 )  . '/lang/' );
+			dirname( __FILE__, 3 )  . '/languages/' );
 
 
 	}
