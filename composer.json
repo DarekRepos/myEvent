@@ -1,5 +1,5 @@
 {
-    "name": "DarekRepos/myEvent",
+    "name": "darek-repos/my-event",
     "description": "myEvent Wordpress Plugin allow you to add events from WordPress widgets.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0",
