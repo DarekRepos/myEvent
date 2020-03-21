@@ -1,10 +1,13 @@
 # myEvent Wordpress Plugin
+![Travis (.com) branch](https://img.shields.io/travis/com/DarekRepos/myEvent/master)
+![GitHub](https://img.shields.io/github/license/DarekRepos/myEvent)
+
 myEvent Wordpress Plugin allow you to add events from WordPress widgets. Once you install you cam create post with events dates and it will be automatically be posted on the widget. For detailed description read **"readme.txt"** file.
 
 ## How to install
 
 ### From the Wordpress Plugin Directory
-Currently myEvent plugin is not available in the official website: https://wordpress.org/plugins/ 
+Currently myEvent plugin is not available in the official website: https://wordpress.org/plugins/
 
 ### From this repository
 Go to the [releases](https://github.com/Darekrepos/myevent/releases) section of the repository and download the most recent release. It is the latest file with the ZIP extension.
