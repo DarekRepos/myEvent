@@ -3,9 +3,9 @@ version: '3.1'
 services:
 
   wordpress:
-    image: wordpress
+    image: wordpress:latest
     ports:
-      - 80:80
+      - '80:80'
     environment:
       WORDPRESS_DB_PASSWORD: example
       ABSPATH: /usr/src/wordpress/
