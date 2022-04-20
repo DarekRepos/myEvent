@@ -19,6 +19,7 @@ namespace MyEvent;
 use MyEvent\Core\MyEventAdminPage;
 use MyEvent\Core\MyEventAdminPageSubscriber;
 use MyEvent\Core\MyEventAdminStyleSubscriber;
+use MyEvent\Core\MyEventBlockGutenbergSubscriber;
 use MyEvent\Core\MyEventFrontStyleSubscriber;
 use MyEvent\Core\MyEventLanguageSubscriber;
 use MyEvent\Core\MyEventPostType;
@@ -34,16 +35,19 @@ class MyEvent {
 	private $pluginmanager;
 	private $myeventwidget;
 	private $myeventpostypehooks;
+	private $myeventblocks;
 
 
 	public function __construct( $file ) {
 		$this->pluginsbasename     = plugin_basename( $file );
 		$this->myeventposttype     = new MyEventPostType();
 		$this->myeventpostypehooks = new MyEventPostTypeHooks();
+		$this->myeventblocks = new MyEventBlockGutenbergSubscriber();
 		//TODO: refactor Widget subscriber - needed instance of object
 		$this->myeventwidget = new MyEventWidgetSubscriber();
-		$this->myeventwidget->registerMyeventWidget();
 		$this->pluginmanager = new EventManager();
+		$this->myeventblocks->register();
+		$this->myeventwidget->registerMyeventWidget();
 	}
 
 	public function load() {
