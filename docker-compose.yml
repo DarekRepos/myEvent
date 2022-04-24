@@ -7,6 +7,7 @@ services:
     ports:
       - '80:80'
     environment:
+      WORDPRESS_DEBUG: 1
       WORDPRESS_DB_PASSWORD: example
       ABSPATH: /usr/src/wordpress/
     volumes:
