@@ -14,6 +14,8 @@
 
 namespace MyEvent;
 
+use MyEvent\Core\MyEventActionFilterManager;
+use MyEvent\EventManagement\PluginAPIManager;
 use MyEvent\MyEventAutoloader\MyEventAutoloader;
 
 
@@ -28,4 +30,5 @@ $loader->register();
 $loader->addNamespace( 'MyEvent', dirname( __FILE__ ) . '/inc/' );
 
 $plugin = new MyEvent( __FILE__ );
-add_action( 'wp_loaded', [ $plugin, 'load' ] );
+$manager = new PluginAPIManager();
+$manager->register($plugin);

@@ -16,6 +16,7 @@
 namespace MyEvent;
 
 
+use MyEvent\Core\MyEventActionFilterManager;
 use MyEvent\Core\MyEventAdminPage;
 use MyEvent\Core\MyEventAdminPageSubscriber;
 use MyEvent\Core\MyEventAdminStyleSubscriber;
@@ -27,11 +28,11 @@ use MyEvent\Core\MyEventWidgetSubscriber;
 use MyEvent\EventManagement\EventManager;
 
 
-class MyEvent {
+class MyEvent extends MyEventActionFilterManager{
 
 	private $pluginsbasename;
 	private $myeventposttype;
-	private $pluginmanager;
+	private $eventmanager;
 	private $myeventwidget;
 	private $myeventpostypehooks;
 
@@ -43,7 +44,7 @@ class MyEvent {
 		//TODO: refactor Widget subscriber - needed instance of object
 		$this->myeventwidget = new MyEventWidgetSubscriber();
 		$this->myeventwidget->registerMyeventWidget();
-		$this->pluginmanager = new EventManager();
+		$this->eventmanager = new EventManager();
 	}
 
 	public function load() {
@@ -51,7 +52,7 @@ class MyEvent {
 		$this->myeventpostypehooks->init();
 
 		foreach ( $this->getSubscribers() as $subscriber ) {
-			$this->pluginmanager->addSubscriber( $subscriber );
+			$this->eventmanager->addSubscriber( $subscriber );
 		}
 	}
 
@@ -65,4 +66,5 @@ class MyEvent {
 			new MyEventLanguageSubscriber()
 		];
 	}
+
 }
