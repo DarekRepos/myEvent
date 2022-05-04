@@ -33,7 +33,6 @@ class MyEvent extends MyEventActionFilterManager{
 	private $pluginsbasename;
 	private $myeventposttype;
 	private $eventmanager;
-	private $myeventwidget;
 	private $myeventpostypehooks;
 
 
@@ -42,8 +41,6 @@ class MyEvent extends MyEventActionFilterManager{
 		$this->myeventposttype     = new MyEventPostType();
 		$this->myeventpostypehooks = new MyEventPostTypeHooks();
 		//TODO: refactor Widget subscriber - needed instance of object
-		$this->myeventwidget = new MyEventWidgetSubscriber();
-		$this->myeventwidget->registerMyeventWidget();
 		$this->eventmanager = new EventManager();
 	}
 
@@ -63,8 +60,10 @@ class MyEvent extends MyEventActionFilterManager{
 			] ),
 			new MyEventAdminStyleSubscriber(),
 			new MyEventFrontStyleSubscriber(),
-			new MyEventLanguageSubscriber()
 		];
 	}
 
 }
+
+
+
