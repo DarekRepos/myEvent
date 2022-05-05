@@ -42,8 +42,8 @@ services:
         wp core install --path="/var/www/html" --url="http://localhost" --title="Local Wordpress By myEvent" --admin_user=admin --admin_password=password --admin_email=darek@darek.com  --allow-root;
         wp language core install pl_PL;
         wp language core activate pl_PL;
-        wp core update
-        wp i18n make-pot . languages/my-event-lang.pot
+        wp core update;
+        wp i18n make-pot . languages/my-event-lang.pot;
         '
     # add shared volumes
     volumes:
