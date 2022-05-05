@@ -41,21 +41,21 @@ class MyEventAdminPage extends MyEventAdminPageRender implements MyEventAdminPag
 			] );
 
 		add_settings_section( $this->getSlug() . '-event-section',
-			esc_html__( 'Events', 'myEvent' ),
+			__( 'Events', 'my-event-lang' ),
 			[
 				$this,
 				'renderEventSection'
 			],
 			$this->getSlug() );
 		add_settings_section( $this->getSlug() . '-effect-section',
-			esc_html__( 'Effects', 'myEvent' ),
+			__( 'Effects', 'my-event-lang' ),
 			[
 				$this,
 				'renderEffectSection'
 			],
 			$this->getSlug() );
 		add_settings_field( $this->getSlug() . '-amount',
-			esc_html__( 'Number of events', 'myEvent' ),
+			__( 'Number of events', 'my-event-lang' ),
 			[
 				$this,
 				'renderOptionField'
@@ -64,7 +64,7 @@ class MyEventAdminPage extends MyEventAdminPageRender implements MyEventAdminPag
 			$this->getSlug() . '-event-section'
 		);
 		add_settings_field( $this->getSlug() . '-hover-option',
-			esc_html__( 'Hover effect', 'myEvent' ),
+			__( 'Hover effect', 'my-event-lang' ),
 			[
 				$this,
 				'renderHoverOptionField'
@@ -73,7 +73,7 @@ class MyEventAdminPage extends MyEventAdminPageRender implements MyEventAdminPag
 			$this->getSlug() . '-effect-section'
 		);
 		add_settings_field( $this->getSlug() . '-text-color-option',
-			esc_html__( 'Text color', 'myEvent' ),
+			__( 'Text color', 'my-event-lang' ),
 			[
 				$this,
 				'renderTextColorOptionField'

@@ -1,109 +1,97 @@
-# Copyright (C) 2022 Darek Duda
-# This file is distributed under the GPL-2.0+ or later.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: myEvent 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/myEvent\n"
-"POT-Creation-Date: 2022-05-02 10:18:24+00:00\n"
-"PO-Revision-Date: 2022-05-03 12:16+0200\n"
-"Last-Translator: \n"
+"Project-Id-Version: Package Name\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-05 15:39+0200\n"
+"PO-Revision-Date: 2022-05-05 15:41+0200\n"
 "Language-Team: \n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c\n"
-"X-Poedit-Basepath: ..\n"
-"X-Textdomain-Support: yes\n"
-"X-Generator: Poedit 3.0.1\n"
-"X-Poedit-SearchPath-0: .\n"
+"X-Generator: Poedit 2.0.6\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: pl_PL\n"
 
-#: inc/Core/MyEventAdminPage.php:44
+#: Core/MyEventAdminPage.php:44
 msgid "Events"
 msgstr "Wydarzenia"
 
-#: inc/Core/MyEventAdminPage.php:51
+#: Core/MyEventAdminPage.php:51
 msgid "Effects"
 msgstr "Efekty"
 
-#: inc/Core/MyEventAdminPage.php:58
+#: Core/MyEventAdminPage.php:58
 msgid "Number of events"
 msgstr "Liczba wydarzeń"
 
-#: inc/Core/MyEventAdminPage.php:67
+#: Core/MyEventAdminPage.php:67
 msgid "Hover effect"
-msgstr "Efekt Hover"
+msgstr "Efekt  Hover"
 
-#: inc/Core/MyEventAdminPage.php:76
+#: Core/MyEventAdminPage.php:76
 msgid "Text color"
 msgstr "Kolor tekstu"
 
-#: inc/Core/MyEventPostType.php:13 inc/Core/MyEventPostType.php:14
+#: Core/MyEventAdminPageSubscriber.php:37
+#, php-format
+msgid "Moje %s"
+msgstr "Moje ustawienia"
+
+#: Core/MyEventPostType.php:13 Core/MyEventPostType.php:14
 msgid "MyEvent"
 msgstr "MyEvent"
 
-#: inc/Core/MyEventPostType.php:34
+#: Core/MyEventPostType.php:34
 msgid "Event Location"
-msgstr "Miejsce wydarzenia"
+msgstr "Miejsce Wydarzenia"
 
-#: inc/Core/MyEventPostType.php:35
+#: Core/MyEventPostType.php:35
 msgid "Event date"
-msgstr "Data wydarzenia"
+msgstr "Data Wydarzenia"
 
-#: inc/Core/MyEventPostType.php:36
+#: Core/MyEventPostType.php:36
 msgid "Event time"
-msgstr "Czas wydarzenia"
+msgstr "Czas Wydarzenia"
 
-#: inc/Core/MyEventWidget.php:16
+#: Core/MyEventWidget.php:16
 msgid "A plugin for display basic events"
-msgstr "Wtyczka wyswietlająca wydarzenia"
+msgstr "Wtyczka do wyswietlania Wydarzeń"
 
-#: inc/Core/MyEventWidget.php:18
+#: Core/MyEventWidget.php:18
 msgid "myEvent Widget"
-msgstr "myEvent widget"
+msgstr "myEvent Widget"
 
-#: inc/Core/MyEventWidget.php:49
+#: Core/MyEventWidget.php:49
 msgid "Title:"
 msgstr "Tytuł:"
 
-#: inc/Views/effect_section.php:1
+#: Views/effect_section.php:1
 msgid "Customize widget display styles"
 msgstr "Dostosuj style wyświetlania widgetu"
 
-#: inc/Views/event_section.php:1
+#: Views/event_section.php:1
 msgid "Adjust the number of widget events displayed"
 msgstr "Dostosuj liczbę wyświetlanych wydarzeń"
 
-#: inc/Views/hover_option_field.php:5
+#: Views/hover_option_field.php:5
 msgid "none"
 msgstr "brak"
 
-#: inc/Views/hover_option_field.php:23
+#: Views/hover_option_field.php:23
 msgid "border"
 msgstr "obramowanie"
 
-#: inc/Views/page.php:9
+#: Views/page.php:5
+#, php-format
+msgid "%1$s"
+msgstr "Ustawienia pluginu myEvent"
+
+#: Views/page.php:12
 msgid "Save"
 msgstr "Zapisz"
-
-#. Plugin Name of the plugin/theme
-msgid "myEvent"
-msgstr "MyEvent"
-
-#. Plugin URI of the plugin/theme
-msgid "https://github.com/DarekRepos/myEvent"
-msgstr "https://github.com/DarekRepos/myEvent"
-
-#. Description of the plugin/theme
-msgid "This is the widget displays events dates."
-msgstr "Dostosuj liczbę wyświetlanych wydarzeń"
-
-#. Author of the plugin/theme
-msgid "Darek Duda"
-msgstr "Darek Duda"
-
-#. Author URI of the plugin/theme
-msgid "https://dudawebsite.com"
-msgstr "https://dudawebsite.com"

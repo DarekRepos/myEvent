@@ -31,9 +31,9 @@ Class MyEventPostType {
 		$template_date     = plugin_dir_path( __DIR__ ) . 'Views/date-metabox-view.php';
 		$template_time     = plugin_dir_path( __DIR__ ) . 'Views/time-metabox-view.php';
 
-		$meta_box_location = MetaBoxFactory::create( 'myEvents_location', esc_html__( 'Event Location' ), $template_location, 'myevents', 'normal' );
-		$meta_box_date     = MetaBoxFactory::create( 'myEvents_date', esc_html__( 'Event date' ), $template_date, 'myevents', 'side' );
-		$meta_box_time     = MetaBoxFactory::create( 'myEvents_time', esc_html__( 'Event time' ), $template_time, 'myevents', 'side' );
+		$meta_box_location = MetaBoxFactory::create( 'myEvents_location', __( 'Event Location','my-event-lang'), $template_location, 'myevents', 'normal' );
+		$meta_box_date     = MetaBoxFactory::create( 'myEvents_date', __( 'Event date' ,'my-event-lang'), $template_date, 'myevents', 'side' );
+		$meta_box_time     = MetaBoxFactory::create( 'myEvents_time', __( 'Event time' ,'my-event-lang'), $template_time, 'myevents', 'side' );
 
 		add_meta_box( $meta_box_location->getId(),
 			$meta_box_location->getTitle(),
