@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Package Name\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-05 15:39+0200\n"
+"PO-Revision-Date: 2022-05-05 15:41+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: pl_PL\n"
+
+#: Core/MyEventAdminPage.php:44
+msgid "Events"
+msgstr "Wydarzenia"
+
+#: Core/MyEventAdminPage.php:51
+msgid "Effects"
+msgstr "Efekty"
+
+#: Core/MyEventAdminPage.php:58
+msgid "Number of events"
+msgstr "Liczba wydarzeń"
+
+#: Core/MyEventAdminPage.php:67
+msgid "Hover effect"
+msgstr "Efekt  Hover"
+
+#: Core/MyEventAdminPage.php:76
+msgid "Text color"
+msgstr "Kolor tekstu"
+
+#: Core/MyEventAdminPageSubscriber.php:37
+#, php-format
+msgid "Moje %s"
+msgstr "Moje ustawienia"
+
+#: Core/MyEventPostType.php:13 Core/MyEventPostType.php:14
+msgid "MyEvent"
+msgstr "MyEvent"
+
+#: Core/MyEventPostType.php:34
+msgid "Event Location"
+msgstr "Miejsce Wydarzenia"
+
+#: Core/MyEventPostType.php:35
+msgid "Event date"
+msgstr "Data Wydarzenia"
+
+#: Core/MyEventPostType.php:36
+msgid "Event time"
+msgstr "Czas Wydarzenia"
+
+#: Core/MyEventWidget.php:16
+msgid "A plugin for display basic events"
+msgstr "Wtyczka do wyswietlania Wydarzeń"
+
+#: Core/MyEventWidget.php:18
+msgid "myEvent Widget"
+msgstr "myEvent Widget"
+
+#: Core/MyEventWidget.php:49
+msgid "Title:"
+msgstr "Tytuł:"
+
+#: Views/effect_section.php:1
+msgid "Customize widget display styles"
+msgstr "Dostosuj style wyświetlania widgetu"
+
+#: Views/event_section.php:1
+msgid "Adjust the number of widget events displayed"
+msgstr "Dostosuj liczbę wyświetlanych wydarzeń"
+
+#: Views/hover_option_field.php:5
+msgid "none"
+msgstr "brak"
+
+#: Views/hover_option_field.php:23
+msgid "border"
+msgstr "obramowanie"
+
+#: Views/page.php:5
+#, php-format
+msgid "%1$s"
+msgstr "Ustawienia pluginu myEvent"
+
+#: Views/page.php:12
+msgid "Save"
+msgstr "Zapisz"

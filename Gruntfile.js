@@ -32,7 +32,7 @@ module.exports = function( grunt ) {
 				options: {
 					domainPath: '/languages',
 					mainFile: 'myEvent.php',
-					potFilename: 'myEvent.pot',
+					potFilename: 'my-event.pot',
 					potHeaders: {
 						poedit: true,
 						'x-poedit-keywordslist': true

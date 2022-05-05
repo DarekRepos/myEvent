@@ -2,7 +2,7 @@
     <ul>
         <li>
             <label for="none">
-				<?php _e( 'none' ); ?>
+				<?php esc_html_e( 'none' ); ?>
                 <input type="radio"
                        id="myevents_admin_page-hover-option"
                        value="none"
@@ -20,7 +20,7 @@
         </li>
         <li>
             <label for="border">
-				<?php _e( 'border' ); ?>
+				<?php esc_html_e( 'border','my-event-lang' ); ?>
                 <input type="radio"
                        id="myevents_admin_page-hover-option"
                        value="border"

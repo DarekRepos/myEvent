@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Package Name\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-05 15:39+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: Core/MyEventAdminPage.php:44
+msgid "Events"
+msgstr ""
+
+#: Core/MyEventAdminPage.php:51
+msgid "Effects"
+msgstr ""
+
+#: Core/MyEventAdminPage.php:58
+msgid "Number of events"
+msgstr ""
+
+#: Core/MyEventAdminPage.php:67
+msgid "Hover effect"
+msgstr ""
+
+#: Core/MyEventAdminPage.php:76
+msgid "Text color"
+msgstr ""
+
+#: Core/MyEventAdminPageSubscriber.php:37
+#, php-format
+msgid "Moje %s"
+msgstr ""
+
+#: Core/MyEventPostType.php:13 Core/MyEventPostType.php:14
+msgid "MyEvent"
+msgstr ""
+
+#: Core/MyEventPostType.php:34
+msgid "Event Location"
+msgstr ""
+
+#: Core/MyEventPostType.php:35
+msgid "Event date"
+msgstr ""
+
+#: Core/MyEventPostType.php:36
+msgid "Event time"
+msgstr ""
+
+#: Core/MyEventWidget.php:16
+msgid "A plugin for display basic events"
+msgstr ""
+
+#: Core/MyEventWidget.php:18
+msgid "myEvent Widget"
+msgstr ""
+
+#: Core/MyEventWidget.php:49
+msgid "Title:"
+msgstr ""
+
+#: Views/effect_section.php:1
+msgid "Customize widget display styles"
+msgstr ""
+
+#: Views/event_section.php:1
+msgid "Adjust the number of widget events displayed"
+msgstr ""
+
+#: Views/hover_option_field.php:5
+msgid "none"
+msgstr ""
+
+#: Views/hover_option_field.php:23
+msgid "border"
+msgstr ""
+
+#: Views/page.php:5
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: Views/page.php:12
+msgid "Save"
+msgstr ""

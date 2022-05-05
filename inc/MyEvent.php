@@ -16,6 +16,7 @@
 namespace MyEvent;
 
 
+use MyEvent\Core\MyEventActionFilterManager;
 use MyEvent\Core\MyEventAdminPage;
 use MyEvent\Core\MyEventAdminPageSubscriber;
 use MyEvent\Core\MyEventAdminStyleSubscriber;
@@ -28,26 +29,22 @@ use MyEvent\Core\MyEventWidgetSubscriber;
 use MyEvent\EventManagement\EventManager;
 
 
-class MyEvent {
+class MyEvent extends MyEventActionFilterManager{
 
 	private $pluginsbasename;
 	private $myeventposttype;
-	private $pluginmanager;
-	private $myeventwidget;
+	private $eventmanager;
 	private $myeventpostypehooks;
-	private $myeventblocks;
+	private $gutenbergBlock;
 
 
 	public function __construct( $file ) {
 		$this->pluginsbasename     = plugin_basename( $file );
 		$this->myeventposttype     = new MyEventPostType();
 		$this->myeventpostypehooks = new MyEventPostTypeHooks();
-		$this->myeventblocks = new MyEventBlockGutenbergSubscriber();
 		//TODO: refactor Widget subscriber - needed instance of object
-		$this->myeventwidget = new MyEventWidgetSubscriber();
-		$this->pluginmanager = new EventManager();
-		$this->myeventblocks->register();
-		$this->myeventwidget->registerMyeventWidget();
+		$this->eventmanager = new EventManager();
+		$this->gutenbergBlock =new MyEventBlockGutenbergSubscriber();
 	}
 
 	public function load() {
@@ -55,7 +52,7 @@ class MyEvent {
 		$this->myeventpostypehooks->init();
 
 		foreach ( $this->getSubscribers() as $subscriber ) {
-			$this->pluginmanager->addSubscriber( $subscriber );
+			$this->eventmanager->addSubscriber( $subscriber );
 		}
 	}
 
@@ -66,7 +63,10 @@ class MyEvent {
 			] ),
 			new MyEventAdminStyleSubscriber(),
 			new MyEventFrontStyleSubscriber(),
-			new MyEventLanguageSubscriber()
 		];
 	}
+
 }
+
+
+
