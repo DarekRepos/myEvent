@@ -3,17 +3,18 @@
  * Plugin Name:       myEvent
  * Plugin URI:        https://github.com/DarekRepos/myEvent
  * Description:       This is the widget displays events dates.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Darek Duda
  * Author URI:        https://dudawebsite.com
  * License:           GPL-2.0+ or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       myEvent
+ * Text Domain:       my-event-lang
  * Domain Path:       /languages
  */
 
 namespace MyEvent;
 
+use MyEvent\EventManagement\PluginAPIManager;
 use MyEvent\MyEventAutoloader\MyEventAutoloader;
 
 
@@ -28,4 +29,5 @@ $loader->register();
 $loader->addNamespace( 'MyEvent', dirname( __FILE__ ) . '/inc/' );
 
 $plugin = new MyEvent( __FILE__ );
-add_action( 'wp_loaded', [ $plugin, 'load' ] );
+$manager = new PluginAPIManager();
+$manager->register($plugin);
