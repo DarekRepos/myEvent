@@ -22,7 +22,8 @@ class MyEventActionFilterManager implements ActionHookSubscriberInterface, Filte
 		return array(
 			'wp_loaded' => 'load',
 			'init' => 'loadTextDomain',
-			'widgets_init' => 'registerMyeventWidget'
+			'widgets_init' => 'registerMyeventWidget',
+			'plugin_loaded' =>  'registerGutenbergBlock'
 		);
 	}
 
@@ -62,5 +63,22 @@ class MyEventActionFilterManager implements ActionHookSubscriberInterface, Filte
 		register_widget(MyEventWidget::class);
 	}
 
+
+	/**
+	 * Registering gutenberg block
+	 * @return void
+	 */
+	public function registerGutenbergBlock()
+	{
+
+		wp_register_script('custom-myevent-js',
+			plugins_url('assets/js/gutenberg-myEvent-block.js',
+				dirname(__FILE__, 2)),
+			array('wp-blocks', 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor'));
+
+		register_block_type('myeventblock/custom-myevent-js', array(
+			'editor_script' => 'custom-myevent-js'
+		));
+	}
 }
 
