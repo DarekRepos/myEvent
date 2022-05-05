@@ -43,7 +43,7 @@ services:
         wp language core install pl_PL;
         wp language core activate pl_PL;
         wp core update;
-        wp i18n make-pot . languages/my-event-lang.pot;
+        wp i18n make-pot . languages/my-event-lang.pot --domain=my-event-lang;
         '
     # add shared volumes
     volumes:
