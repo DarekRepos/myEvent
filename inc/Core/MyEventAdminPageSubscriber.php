@@ -34,7 +34,7 @@ class MyEventAdminPageSubscriber implements SubscriberHooksInterface {
 			add_submenu_page(
 				$admin_page->getParentSlug(),
 				$admin_page->getPageTitle(),
-				$admin_page->getMenuTitle(),
+				sprintf( esc_html__( 'Moje %s', 'my-event-lang' ), $admin_page->getMenuTitle() ),
 				$admin_page->getCapability(),
 				$admin_page->getSlug(),
 				[
